@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:window_shop_app/constants.dart';
+import 'package:window_shop_app/app_theme.dart';
 import 'package:window_shop_app/routes.dart';
 import 'package:window_shop_app/screens/splash/splash.dart';
 
@@ -16,16 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Window Shop',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: TextTheme(
-          bodyLarge: TextStyle(color: kTextColor),
-          bodyMedium: TextStyle(color: kTextColor),
-        ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: appTheme(),
       initialRoute: Splash.routeName,
       routes: routes,
     );

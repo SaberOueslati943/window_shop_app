@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:window_shop_app/constants.dart';
+import 'package:window_shop_app/screens/sign_in/sign_in.dart';
 import 'package:window_shop_app/size_config.dart';
-
-// This is the best practice
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
@@ -71,7 +70,7 @@ class BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        
+                        Navigator.pushNamed(context, SignIn.routeName);
                       },
                     ),
                     const Spacer(),
@@ -92,7 +91,7 @@ class BodyState extends State<Body> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index ? kPrimaryColor : const Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3),
       ),
     );
